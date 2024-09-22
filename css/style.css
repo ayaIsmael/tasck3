@@ -26,6 +26,10 @@ body{
     transform: scale(1.05);
     box-shadow: 0px 4px 20px 10px rgba(2, 140, 195, 22%);
 }
+.logoImg{
+    width: 150px;
+    max-height: 30vh;
+}
 .hero-bg{
     position: absolute;
     z-index: -1;
@@ -255,9 +259,10 @@ a.btn:focus{
     transition: .3s ease;
 }
 .form input[type='submit']:hover{
-    color: var(--pinkColor);
-    background: none;
-    border: 1px solid var(--pinkColor);
+    background: #A9066D;
+    /* color: var(--pinkColor);
+    background: #fff;
+    border: 1px solid var(--pinkColor); */
 }
 /* end contact part */
 
@@ -400,6 +405,7 @@ a.btn:focus{
 
 /* media screen */
 @media (min-width: 768px){
+    
     .download-txt{
         width: 50%;
     }
@@ -417,6 +423,10 @@ a.btn:focus{
     }
 }
 @media (min-width: 992px){
+    .logoImg{
+        width: 220px;
+        max-height: 300px;
+    }
     .contact-txt{
         margin: unset;
         margin-right: auto;
