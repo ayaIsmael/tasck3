@@ -10,7 +10,6 @@
 body{
     font-family: "Cairo", sans-serif;
     direction: rtl;
-    /* overflow: hidden; */
 }
 /* start hero */
 .hero{
@@ -124,40 +123,13 @@ a.btn:focus{
     border: 1px solid var(--blueColor);
 }
 /* end about section */
-/* start features section */
-.head{
-    text-align: center;
-    color: var(--blueColor);
-    font-weight: 700;
-    margin-bottom: 1.5rem;
-}
-.feature{
-    padding: 1.5rem;
-    border-radius: 20px;
-    text-align: center;
-    transition: .2s ease;
-}
-.feature h3{
-    font-weight: 700;
-    color: var(--blueColor);
-}
-.feature p{
-    color:  #656565;
-    font-size: 24px;
-    line-height: 40px;
-}
-.feature:hover{
-    transform: scale(1.05);
-    box-shadow: 0px 4px 20px 0px rgba(2, 140, 195, 22%);
-}
-/* end features section */
-/* start questions section */
-.questions-txt h3{
+/* start offers part */
+.offers-txt h3{
     font-size: 32px;
     font-weight: 700;
     color: var(--pinkColor);
 }
-.questions-txt p{
+.offers-txt p{
     color: #6D6D6D;
     line-height: 40px;
 }
@@ -176,7 +148,7 @@ a.btn:focus{
         bottom: 50px;
     }
 }
-/* end questions section */
+/* end offers part */
 /* start download part */
 .download-txt{
     padding: 1rem;
@@ -321,6 +293,12 @@ a.btn:focus{
 /* end footer */
 
 /* start who we are page ********************* */
+.head{
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--blueColor);
+    margin-bottom: 1.5rem;
+}
 .whos-row{
     padding: 0 1rem;
     border-radius: 20px;
@@ -356,38 +334,69 @@ a.btn:focus{
 }
 .whos-txt p{
     font-weight: 600;
-}
-/* end who we are page ********************* */
-/* start blog page ***************************** */
-.blog-box-1,
-.blog-box-2{
-    font-size: 24px;
-    font-weight: 700;
-    box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 25%);
-}
-.blog-box-1{
-    height: 480px;
-    color: #fff;
-    background: var(--blueColor);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.blog-box-2{
-    width: 90%;
-    padding: 1rem;
-    background: #fff;
-    margin-top: -50px;
     transition: .3s ease;
 }
-.blog-box-2 span{
-    font-weight: 400;
-    color: #5B5B5B;
+.whos-txt p:hover{
+    color: var(--pinkColor);
 }
-.blog-box-2:hover{
-    transform: scale(1.05);
+/* end who we are page ********************* */
+
+/* start questions page ****************** */
+.accordion-item {
+    border: 1px solid #838383;
+    border-radius: 0;
+    margin-bottom: 1.5rem;
+    transition: .2s ease;
 }
-/* end blog page ***************************** */
+.accordion-item:not(:first-of-type) {
+    border-top: 1px solid #838383;
+}
+.accordion-item:last-of-type {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+.accordion-item:first-of-type {
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+}
+.accordion-item:hover{
+    transform: scale(.975);
+}
+.accordion-button {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--pinkColor);
+}
+.accordion-button:not(.collapsed) {
+    color: var(--pinkColor);
+    background-color: #fff;
+    box-shadow: none;
+}
+.accordion-button:focus {
+    box-shadow: none;
+}
+.accordion-button::after {
+    width: 80px;
+    height: 80px;
+    background-image: url(../images/plusIcon.svg);
+    background-size: cover;
+    transition: transform .2s ease-in-out;
+}
+.accordion-button:not(.collapsed)::after {
+    background-image: url(../images/minusIcon.svg);   
+    transform: unset;  
+}
+.accordion-body{
+    font-size: 18px;
+    line-height: 50px;
+    font-weight: 600;
+    color: #484848;
+    transition: .3s ease;
+}
+.accordion-body:hover{
+    color: var(--blueColor);
+}
+/* end questions page ****************** */
 
 /* media screen */
 @media (min-width: 768px){
@@ -400,6 +409,10 @@ a.btn:focus{
    }
     .whos-txt p{
         font-size: 25px;
+        line-height: 70px;
+    }
+    .accordion-body{
+        font-size: 24px;
         line-height: 70px;
     }
 }
